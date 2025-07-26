@@ -14,7 +14,7 @@ REGION = 'us-east-1'
 dynamodb = boto3.resource('dynamodb', region_name=REGION)
 sns = boto3.client('sns', region_name=REGION)
 
-SNS_TOPIC_ARN = 'arn:aws:sns:ap-south-1:YOUR_ACCOUNT_ID:YourTopicName'  # 🔁 Replace this
+SNS_TOPIC_ARN = 'arn:aws:sns:us-east-1:816069148693:medtrack' # 🔁 Replace this
 
 # DynamoDB Tables
 users_table = dynamodb.Table('Users')
