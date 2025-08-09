@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>View Report | MedTrack</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand" href="/dashboard">MedTrack</a>
+      <div class="ms-auto">
+        <a href="/logout" class="btn btn-outline-light">Logout</a>
+      </div>
+    </div>
+  </nav>
+  <section class="py-5">
+    <div class="container">
+      <h2 class="mb-4 text-primary">Report Details</h2>
+      <div class="card shadow border-0">
+        <div class="card-body">
+          <h5 class="card-title">Appointment with {{ appointment.doctor }} on {{ appointment.date }} at {{ appointment.time }}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Patient: {{ appointment.patient_email }}</h6>
+          {% if report %}
+            <p><strong>Doctor Name:</strong> {{ report.doctor_name }}</p>
+            <p><strong>Summary:</strong> {{ report.summary }}</p>
+            <p><strong>File:</strong> <a href="/uploads/{{ report.filename }}" target="_blank">{{ report.filename }}</a></p>
+          {% else %}
+            <p>No report found for this appointment.</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

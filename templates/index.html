@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MedTrack - Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand" href="/">MedTrack</a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="/register">Sign Up</a></li>
+          <li class="nav-item"><a class="nav-link" href="/dashboard">Dashboard</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero text-white text-center d-flex align-items-center justify-content-center">
+    <div>
+      <h1 class="display-4 fw-bold">Welcome to MedTrack</h1>
+      <p class="lead">Your cloud-based healthcare assistant for smarter care</p>
+      <div class="d-flex flex-column flex-md-row justify-content-center gap-3 mt-4">
+        <a href="/book-appointment" class="btn btn-primary btn-lg">Book Appointment</a>
+        <a href="/medical-history" class="btn btn-success btn-lg">Medical History</a>
+        <a href="/submit-diagnosis" class="btn btn-warning btn-lg">Submit Diagnosis</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="mb-4">Why Choose MedTrack?</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card shadow border-0">
+            <div class="card-body">
+              <h5 class="card-title">Easy Appointment Booking</h5>
+              <p class="card-text">Book and manage your appointments with just a few clicks.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow border-0">
+            <div class="card-body">
+              <h5 class="card-title">Secure Data Management</h5>
+              <p class="card-text">AWS IAM and DynamoDB ensure your records are safe.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow border-0">
+            <div class="card-body">
+              <h5 class="card-title">Access Anywhere</h5>
+              <p class="card-text">Login anytime, anywhere from any device.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-primary text-white text-center p-3">
+    © 2025 MedTrack | All Rights Reserved
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
